@@ -81,7 +81,8 @@ router.post('/',
 
     // check Caption is valid
     if (!caption) {
-        return res.status(400).send({ message: 'Caption is required or malformed' });
+        return res.status(400).send({ message: 'Caption is required or malformed' });ls
+        
     }
 
     // check Filename is valid
