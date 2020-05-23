@@ -28,6 +28,30 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:8082/filteredimage?image_url=https://i.picsum.photos/id/856/200/300.jpg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{HOST}}/filteredimage?image_url=https://i.picsum.photos/id/856/200/300.jpg",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://i.picsum.photos/id/856/200/300.jpg"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
