@@ -38,9 +38,13 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       res.sendStatus(400).send('please enter a valid url');
     }
     try {
-      // const filteredpath = await filterImageFromURL(image_url);
-      // res.sendFile(filteredpath), () => deleteLocalFiles([filteredpath]);
-    res.sendFile(await filterImageFromURL(image_url));
+    const image_path = await filterImageFromURL(image_url) as string
+    await res.status(200).sendFile(image_path, {}, (error) => {
+      if (error){return res.status(422).send('Error processing the image');}
+  
+    
+    deleteLocalFiles([image_path]);
+  })
     
     }
     catch(error){

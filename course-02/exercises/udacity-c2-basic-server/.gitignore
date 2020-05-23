@@ -35,3 +35,10 @@ UserInterfaceState.xcuserstate
 node_modules
 venv/
 .vscode
+netstack.yml
+netstack_params.json
+nginx_default
+servestack_params.json
+servstack.yml
+stack_maker.py
+
